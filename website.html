@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, Avi!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:wght@500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel ="stylesheet" href="styles.css">
+    <link rel = "icon" href = "images/logo.png" >
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <div class="music-player">
+        <div class="music-btn" id="playBtn">
+            <i class="fas fa-play"></i>
+        </div>
+        <audio id="birthdaySong" autoplay loop>
+            <source src="audio/Happy Birthday Lyrics ( KOREAN ) Saengil chukha hamnida LYRICS.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <header  data-aos="fade-down">
+        <div class="header-content" data-aos="fade-down">
+            <img src = "images/logo.png" alt = "logo" width = "200" height = "200" id = "logo">
+            <h1>Happy Birthday, Avi!</h1>
+            <p class="birthday-date">September 30 , 19 na ang baba kooooo!!!</p>
+            <p>Scroll down for your surprise</p>
+        </div>
+    </header>
+
+    <div class="container" data-aos="fade-up">
+        <section class="hero">
+            <h2>To the Most Beautiful Girl!!</h2>
+            <div class="photo-frame">
+                <img class="hero-img" src="/images/avi.jpg" alt="Birthday celebration">
+            </div>
+            <p>The most purest and kindest soul I had met. Cheers to 19th Avii!!</p>
+        </section>
+
+        <section class="message" data-aos="fade-up" duration="5000">
+            <h2>HAPPY BIRTHDAY MY AVI!</h2>
+             <p>To my sunshine, my avii, my pandakikay, and my loveloveee. Eto na yung sinasasabi kong digital version!! HIHI Happy 19th birthday to youuu. This year had been a fun and rollercoaster ride for you and also a memorable one for the both of us. For the past months of the year, we had faced many laughters, joy, adventures, travels, and we even had done many first times with each other. Minsan nagkakaroon man tayo ng mga tampuhan but we always manage to find a way to fix it. Winny loves you soo much and he's very proudd of what you had done thisss year!!! He is very proud sa lahat ng laban na finace mo confidently and bravely. Winny always wish you the best and will always be there forever to support
+                your dreams in life. You are the most amazing, purest, and kindest person I had ever met. I hope hinding hindi ka magbabago but rather magbago for good termsss not badddd hihi. Walang ibang wish si winny sayo kundi good health and wag kana pasaway!! lagi sumunod ki winny!. Anw, wala naman na akong ibang sasabihin and di kona to ipapalong-long pa kasi everyday sinasabi konaman sayo kung paano kita kalove!!! I hope you liked this mini web na I've made for youuuuuu kahit it's nottt the bestttt hihi. Ilysmmmm, here na yung message ko para sa anniversary natin noong 22 hihi para all in one naaaa. ILYSMMMMM MY AVI, HAPPY 19TH BIRTHDAY MY LOVE. ILYSMMMMM!!
+             </p>
+        </section>
+
+        <section class="interactive-section">
+            <div class="memory-box" onclick="showMemory('Do you know yung first time natin non magpalegazpi kasi its your first birthday non with me. Yun yung first formal date natin sa labas, pero kasama natin non sina ry. But it was still romantic kasi first time ata natin non magsimba together diba? And that time kilala kana din kasi nina papa kaya madali na me nakapaalam na magpapa sm usss. That was so memorable!!! Kung wala lang yung isa and tayo lang ng 3, hay nako, MAS BEST!!! HAHAHA ang sunod na date natin sa labas is siguro yung december na where we go cine.')" data-aos="fade-right" duration="2000" data-aos-anchor-placement="center-bottom">
+                <i class="fas fa-heart"></i>
+                <h3>Our First Date</h3>
+                <p>Click to relive the memory</p>
+            </div>
+            <div class="memory-box" onclick="showMemory('I had so many great adventures with youuuu aviiii and I cant really tell which one was the first kasi each one of it was full of laugghter, enjoyment, and memorable experiences. I dont know nga e if we even photographed those moments. Pero alam mo ang the best adventure ko with you? Its not those with th places na ang gaganda and gara. Yung pinaka dabest is yung pagiging dora and boots the explorer natin sa road everytime ayaw mopa umuwi AGGAHAHAHAHAH. Saur nakakatawa mga chikas mo satin, and madami nadin tayo pinagdaanan sa road HAHAHAH saur funny. Infact don ko nga ata ikaw mas lalog nakilala kasi one time nagkwento ka non about sa life mo especialy the past life mo na hindi mo pa me namemeet hihihi. Saurrrr kamisssss muchie. ')" data-aos="fade-right" duration="2000" data-aos-delay= "100" data-aos-anchor-placement="center-bottom">
+                <i class="fas fa-map-marked-alt"></i>
+                <h3>Best Adventure</h3>
+                <p>Click to relive the memory</p>
+            </div>
+            <div class="memory-box" onclick="showMemory('Lahat naman funny basta magakasama tayo eh HAHAHAH we were born to be each other talaga. Pero ang mga pinaka nakakatawang moments talaga is kapag nagkktv tayo tas panay tayo sigaw HAHAAHHAHAHAHHHA. saur nakakatuwa muchie, infact may video kapa nga here e HAHAHHAHAHHA. Everytime magkasama tayo or lumalabas lagi may comedy part HAHAHAHHAHA.')" data-aos="fade-right" duration="2000" data-aos-delay="200" data-aos-anchor-placement="center-bottom">
+                <i class="fas fa-laugh-beam"></i>
+                <h3>Funniest Moment</h3>
+                <p>Click to relive the memory</p>
+            </div>
+        </section>
+
+        <section class="countdown" data-aos="fade-up" duration="2000" data-aos-anchor-placement="center-bottom">
+            <h2>Countdown to Your Special Day</h2>
+            <div class="countdown-timer">
+                <div class="timer-unit">
+                    <div class="timer-value" id="days">0</div>
+                    <div class="timer-label">Days</div>
+                </div>
+                <div class="timer-unit">
+                    <div class="timer-value" id="hours">0</div>
+                    <div class="timer-label">Hours</div>
+                </div>
+                <div class="timer-unit">
+                    <div class="timer-value" id="minutes">0</div>
+                    <div class="timer-label">Minutes</div>
+                </div>
+                <div class="timer-unit">
+                    <div class="timer-value" id="seconds">0</div>
+                    <div class="timer-label">Seconds</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="love-meter" data-aos="fade-up" duration="2000" data-aos-anchor-placement="center-bottom">
+            <h2>How Much Do I Love You?</h2>
+            <p>Click the button to find out!</p>
+            <button onclick="measureLove()">Measure Love</button>
+            <div class="meter-scale">
+                <div class="meter-fill" id="meterFill"></div>
+            </div>
+            <div class="meter-text" id="meterText">I love you this much!</div>
+        </section>
+
+        <section class="gift-section" data-aos="fade-in" duration="2000" data-aos-anchor-placement="center-bottom">
+            <h2 id = h2-gift>Your Virtual Gift</h2>
+            <div class="gift-box" onclick="openGift()">
+                <div class="lid"></div>
+                <div class="box"></div>
+                <div class="ribbon"></div>
+            </div>
+            <p class="gift-message">Click the gift box to open your surprise!</p>
+        </section>
+
+        <section>
+            <h2 style="text-align: center; margin-bottom: 20px;">Beautiful You</h2>
+            <div class="gallery">
+                <div class="gallery-item" onclick="openModal('images/pic1.jpg')" data-aos="zoom-in" duration="2000" data-aos-delay="100" data-aos-anchor-placement="center-bottom">
+                    <img src="images/pic1.jpg" alt="Memory 1">
+                </div>
+                <div class="gallery-item" onclick="openModal('images/pic2.jpg')" data-aos="zoom-in" duration="2000" data-aos-delay="200" data-aos-anchor-placement="center-bottom">
+                    <img src="images/pic2.jpg" alt="Memory 2">
+                </div>
+                <div class="gallery-item" onclick="openModal('images/pic3.jpg')"data-aos="zoom-in" duration="2000" data-aos-delay="300" data-aos-anchor-placement="center-bottom">
+                    <img src="images/pic3.jpg" alt="Memory 3">
+                </div>
+                <div class="gallery-item" onclick="openModal('images/pic4.jpg')"data-aos="zoom-in" duration="2000" data-aos-delay="400" data-aos-anchor-placement="center-bottom">
+                    <img src="images/pic4.jpg" alt="Memory 4">
+            </div>
+        </section>
+
+        <section class="quiz-container" data-aos="fade-up" duration="2000" data-aos-anchor-placement="center-bottom">
+            <h2>How Well Do You Know Yourself?</h2>
+            <p>Let's see how well you know the amazing person you are!</p>
+            
+            <div class="quiz-question">
+                <h3>What's your favorite color?</h3>
+                <button class="quiz-option" onclick="checkAnswer(this, 'Pink')">Pink</button>
+                <button class="quiz-option" onclick="checkAnswer(this, 'Blue')">Blue</button>
+                <button class="quiz-option" onclick="checkAnswer(this, 'Purple')">Purple</button>
+                <button class="quiz-option" onclick="checkAnswer(this, 'Green')">Green</button>
+            </div>
+            
+            <div class="quiz-question"> 
+                <h3>What's your dream vacation?</h3>
+                <button class="quiz-option" onclick="checkAnswer(this, 'Beach')">Go to another Country</button>
+                <button class="quiz-option" onclick="checkAnswer(this, 'Mountains')">Magunwind and magwatch ng city lights</button>
+                <button class="quiz-option" onclick="checkAnswer(this, 'Europe')">Mag beach</button>
+                <button class="quiz-option" onclick="checkAnswer(this, 'Staycation')">Go to another province here in PH</button>
+            </div>
+        </section>
+
+        <section class="wish-form" data-aos="fade-up" duration="2000" data-aos-anchor-placement="center-bottom">
+            <h2>Make a Birthday Wish</h2>
+            <p>Write your special birthday wish that will come true this year!</p>
+            
+            <div class="form-group">
+                <label for="wish-title">Wish Title</label>
+                <input type="text" id="wish-title" placeholder="Enter a title for your wish">
+            </div>
+            
+            <div class="form-group">
+                <label for="wish-message">Your Wish</label>
+                <textarea id="wish-message" placeholder="Write your special birthday wish here..."></textarea>
+            </div>
+            
+            <button onclick="saveWish()">Make a Wish!</button>
+            <p id="wish-status" style="margin-top: 15px;"></p>
+        </section>
+    </div>
+
+    <div class="modal" id="imageModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="Enlarged memory" style="width: 100%; border-radius: 10px;">
+        </div>
+    </div>
+
+    <div class="modal" id="giftModal">
+        <div class="modal-content" data-aos="zoom-in" duration="2000">
+            <span class="close-modal" onclick="closeGiftModal()">&times;</span>
+            <h2>Your Special Gift</h2>
+            <p>You've received a free date, unli hugs, and kisses, from luffy!</p>
+            <p>Enjoy a day of relaxation, love, and enjoyment with your favorite Monkey D. Luffy!</p>
+            <img src="images/luffy.jpg" alt="Spa gift" style="width: 100%; border-radius: 10px; margin-top: 15px;">
+        </div>
+    </div>
+
+    <footer>
+        <p>Made with <span class="heart">LOVEEE FROM WINNY</span> for the most wonderful woman in the world.</p>
+        <p class="signature">Forever yours, <span id="avi">Avi!</span></p>
+        
+    </footer>
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Create confetti
+        function createConfetti() {
+            const colors = ['#ff4d8d', '#ff9ec5', '#ffd6e7', '#ff2e6f', '#ffd700'];
+            const container = document.querySelector('header');
+            
+            for (let i = 0; i < 50; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.animation = `fall ${Math.random() * 5 + 3}s linear infinite`;
+                confetti.style.animationDelay = Math.random() * 2 + 's';
+                container.appendChild(confetti);
+            }
+        }
+
+        // Create floating flowers
+        function createFlowers() {
+            const container = document.querySelector('.container');
+            
+            for (let i = 0; i < 15; i++) {
+                const flower = document.createElement('div');
+                flower.className = 'flower';
+                flower.innerHTML = '<i class="fas fa-heart"></i>';
+                flower.style.left = Math.random() * 100 + 'vw';
+                flower.style.top = Math.random() * 100 + 'vh';
+                flower.style.animation = `fall ${Math.random() * 10 + 5}s linear infinite`;
+                flower.style.animationDelay = Math.random() * 5 + 's';
+                container.appendChild(flower);
+            }
+        }
+
+        // Countdown timer
+        function updateCountdown() {
+            const now = new Date();
+            const currentYear = now.getFullYear();
+            let birthday = new Date(currentYear, 8, 30); // September is month 8 (0-indexed)
+            
+            // If birthday has passed this year, set to next year
+            if (now > birthday) {
+                birthday = new Date(currentYear + 1, 8, 30);
+            }
+            
+            const diff = birthday - now;
+            
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds;
+        }
+
+        // Music player functionality
+        const audio = document.getElementById('birthdaySong');
+        const playBtn = document.getElementById('playBtn');
+        let isPlaying = false;
+
+        playBtn.addEventListener('click', function() {
+            if (isPlaying) {
+                audio.pause();
+                playBtn.innerHTML = '<i class="fas fa-play"></i>';
+            } else {
+                audio.play();
+                playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+            }
+            isPlaying = !isPlaying;
+        });
+
+        // Love meter
+        function measureLove() {
+            const fill = document.getElementById('meterFill');
+            const text = document.getElementById('meterText');
+            
+            // Reset animation
+            fill.style.transition = 'none';
+            fill.style.transform = 'scaleX(0)';
+            
+            // Force reflow
+            void fill.offsetWidth;
+            
+            // Animate
+            fill.style.transition = 'transform 2s ease-out';
+            fill.style.transform = 'scaleX(1)';
+            
+            // Update text with random love message
+            const messages = [
+                "I love you more than words can express!",
+                "My love for you is infinite!",
+                "You mean everything to me!",
+                "I love you to the moon and back!",
+                "My heart belongs to you completely!"
+            ];
+            
+            text.textContent = messages[Math.floor(Math.random() * messages.length)];
+        }
+
+        // Memory modal
+        function showMemory(message) {
+            alert(message);
+        }
+
+        // Image modal
+        function openModal(imageSrc) {
+            document.getElementById('modalImage').src = imageSrc;
+            document.getElementById('imageModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+
+        // Gift modal
+        function openGift() {
+            document.getElementById('giftModal').style.display = 'flex';
+            createSuccessConfetti();
+        }
+
+        function closeGiftModal() {
+            document.getElementById('giftModal').style.display = 'none';
+        }
+
+        // Quiz functionality
+        function checkAnswer(button, correctAnswer) {
+            const allOptions = button.parentElement.querySelectorAll('.quiz-option');
+            
+            allOptions.forEach(option => {
+                option.disabled = true;
+                if (option === button) {
+                    if (option.textContent === correctAnswer) {
+                        option.classList.add('quiz-correct');
+                    } else {
+                        option.classList.add('quiz-incorrect');
+                        // Highlight the correct answer
+                        allOptions.forEach(opt => {
+                            if (opt.textContent === correctAnswer) {
+                                opt.classList.add('quiz-correct');
+                            }
+                        });
+                    }
+                }
+            });
+        }
+
+        // Wish saving functionality
+        function saveWish() {
+            const title = document.getElementById('wish-title').value;
+            const message = document.getElementById('wish-message').value;
+            const status = document.getElementById('wish-status');
+            
+            if (!title || !message) {
+                status.textContent = "Please fill in both fields!";
+                status.style.color = "#ff4d4d";
+                return;
+            }
+            
+            // In a real application, you would save this to a database
+            // For this example, we'll just show a success message
+            status.textContent = "Your wish has been saved and will come true!";
+            status.style.color = "#4CAF50";
+            
+            // Clear the form
+            document.getElementById('wish-title').value = '';
+            document.getElementById('wish-message').value = '';
+            
+            // Create confetti effect for success
+            createSuccessConfetti();
+        }
+
+        function createSuccessConfetti() {
+            const wishForm = document.querySelector('.wish-form');
+            
+            for (let i = 0; i < 20; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + '%';
+                confetti.style.top = Math.random() * 100 + '%';
+                confetti.style.backgroundColor = '#ff4d8d';
+
+                confetti.style.animation = `fall ${Math.random() * 3 + 2}s linear forwards`;
+                wishForm.appendChild(confetti);
+                
+                // Remove confetti after animation
+                setTimeout(() => {
+                    confetti.remove();
+                }, 5000);
+            }
+        }
+
+        // Initialize
+        createConfetti();
+        createFlowers();
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+          AOS.init();
+    </script>
+            </body>
+</html>
+                
