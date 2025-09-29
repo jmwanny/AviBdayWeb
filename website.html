@@ -143,23 +143,29 @@
             </div>
         </section>
 
-        <section class="wish-form" data-aos="fade-up" duration="2000" data-aos-anchor-placement="center-bottom">
-            <h2>Make a Birthday Wish</h2>
-            <p>Write your special birthday wish that will come true this year!</p>
-            
-            <div class="form-group">
-                <label for="wish-title">Wish Title</label>
-                <input type="text" id="wish-title" placeholder="Enter a title for your wish">
-            </div>
-            
-            <div class="form-group">
-                <label for="wish-message">Your Wish</label>
-                <textarea id="wish-message" placeholder="Write your special birthday wish here..."></textarea>
-            </div>
-            
-            <button onclick="saveWish()">Make a Wish!</button>
-            <p id="wish-status" style="margin-top: 15px;"></p>
-        </section>
+     <section class="wish-form" data-aos="fade-up" duration="2000" data-aos-anchor-placement="center-bottom">
+    <h2>Make a Birthday Wish</h2>
+    <p>Write your special birthday wish that will come true this year!</p>
+
+    <form id="wish-form" action="https://api.web3forms.com/submit" method="POST">
+        <!-- Web3Forms Access Key -->
+        <input type="hidden" name="access_key" value="4503db1b-7fd6-49dc-afcb-cf654841af88">
+
+        <div class="form-group">
+            <label for="wish-title">Wish Title</label>
+            <input type="text" id="wish-title" name="Wish Title" placeholder="Enter a title for your wish" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="wish-message">Your Wish</label>
+            <textarea id="wish-message" name="Wish Message" placeholder="Write your special birthday wish here..." required></textarea>
+        </div>
+        
+        <button type="submit">Make a Wish!</button>
+        <!-- This is where the message will show -->
+        <p id="wish-status" style="margin-top: 15px;"></p>
+    </form>
+</section>
     </div>
 
     <div class="modal" id="imageModal">
@@ -332,6 +338,28 @@
                 }
             });
         }
+
+        document.getElementById("wish-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const status = document.getElementById("wish-status");
+
+    fetch(form.action, {
+        method: form.method,
+        body: new FormData(form)
+    }).then(res => res.json())
+    .then(data => {
+        if (data.success) {
+            form.reset(); 
+            // ✅ Your custom message
+            status.textContent = "✨ Your wish has been saved and will come true! ✨";
+            status.style.color = "#4CAF50"; // green
+        }
+    }).catch(() => {
+        status.textContent = "⚠️ Something went wrong, please try again.";
+        status.style.color = "red";
+    });
+});
 
         // Wish saving functionality
         function saveWish() {
